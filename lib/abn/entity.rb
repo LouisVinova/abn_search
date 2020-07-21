@@ -20,6 +20,7 @@ module Abn
       name
       other_trading_name
       status
+      status_company
       trading_name
     ].freeze
 

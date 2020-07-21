@@ -115,6 +115,7 @@ module Abn
       entity.abn                = result[:abn][:identifier_value] rescue nil
       entity.entity_type        = result[:entity_type][:entity_description] rescue nil
       entity.status             = result[:entity_status][:entity_status_code] rescue nil
+      entity.status_company     = result[:abn][:identifier_status] rescue nil
       entity.main_name          = result[:main_name][:organisation_name] rescue nil
       entity.trading_name       = result[:main_trading_name][:organisation_name] rescue nil
       combined_names = [result[:legal_name][:given_name], result[:legal_name][:other_given_name], result[:legal_name][:family_name]].select{|x| !x.blank?}.join(' ') rescue nil
